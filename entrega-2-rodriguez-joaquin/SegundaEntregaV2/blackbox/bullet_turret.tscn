@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqdrm5lfwbuvk"]
+
+[ext_resource type="Script" uid="uid://djlrdr7wmfdlk" path="res://bullet_turret.gd" id="1_vefrw"]
+[ext_resource type="Texture2D" uid="uid://c0u4xmjawvno3" path="res://recursos/resources/proyectile_turret.png" id="2_4m5e5"]
+
+[node name="bulletTurret" type="Area2D"]
+script = ExtResource("1_vefrw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4m5e5")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

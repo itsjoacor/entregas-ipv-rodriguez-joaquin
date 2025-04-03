@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj6jk7h8oiwle"]
+[gd_scene load_steps=5 format=3 uid="uid://dj6jk7h8oiwle"]
 
 [ext_resource type="PackedScene" uid="uid://bp7vdx12go85q" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://3uvfekpg5tpj" path="res://turret.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cobcavtrjmlag" path="res://turret.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c3qr64e7rtupw" path="res://player1.tscn" id="3_h2yge"]
+
+[sub_resource type="GDScript" id="GDScript_ig7tw"]
 
 [node name="Main" type="Node"]
+script = SubResource("GDScript_ig7tw")
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(580, 500)
@@ -23,10 +27,13 @@ color = Color(0.156863, 0.94902, 0.176471, 1)
 position = Vector2(580, 437)
 
 [node name="Turret" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(577, 121)
+position = Vector2(576, 75)
+
+[node name="player" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(579, 408)
 
 [node name="Turret2" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(977, 194)
+position = Vector2(188, 178)
 
 [node name="Turret3" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(125, 149)
+position = Vector2(977, 179)

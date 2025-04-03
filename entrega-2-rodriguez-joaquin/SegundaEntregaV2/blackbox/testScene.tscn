@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ditoun70f5vdj"]
+
+[ext_resource type="PackedScene" uid="uid://c3qr64e7rtupw" path="res://player1.tscn" id="1_vixnb"]
+[ext_resource type="PackedScene" uid="uid://cobcavtrjmlag" path="res://turret.tscn" id="2_5lntk"]
+
+[node name="Test" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_vixnb")]
+position = Vector2(619, 401)
+
+[node name="Turret" parent="." instance=ExtResource("2_5lntk")]
+position = Vector2(619, 171)
