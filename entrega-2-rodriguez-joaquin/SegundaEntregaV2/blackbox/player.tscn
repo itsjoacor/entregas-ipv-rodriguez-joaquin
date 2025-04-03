@@ -38,8 +38,9 @@ size = Vector2(32, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(128, 128)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(652, 347)
+collision_layer = 2
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
 
@@ -49,6 +50,7 @@ sprite_frames = SubResource("SpriteFrames_onrkg")
 animation = &"crabwise"
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="AnimatedSprite2D"]
+collision_layer = 2
 script = ExtResource("3_hqtel")
 
 [node name="Canon" type="Sprite2D" parent="AnimatedSprite2D/CharacterBody2D"]
