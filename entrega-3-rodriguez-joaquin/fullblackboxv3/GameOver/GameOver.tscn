@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc8cllqj6ib7u"]
+
+[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="1_bed4b"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(205.5, 105.5)
+scale = Vector2(7.42188, 4.29688)
+texture = ExtResource("1_bed4b")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Label" type="Label" parent="CanvasModulate"]
+offset_left = 155.0
+offset_top = 92.0
+offset_right = 251.0
+offset_bottom = 115.0
+text = "Game Over!!"

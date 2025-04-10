@@ -6,9 +6,6 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("3_fos0i")]
-position = Vector2(28, 91)
-
 [node name="Main" parent="." instance=ExtResource("2_uu6xs")]
 metadata/_edit_group_ = true
 
@@ -20,3 +17,6 @@ position = Vector2(816, 39)
 
 [node name="Turret2" parent="." instance=ExtResource("2_cm0pq")]
 position = Vector2(386, 44)
+
+[node name="Player" parent="." instance=ExtResource("3_fos0i")]
+position = Vector2(27, 164)
