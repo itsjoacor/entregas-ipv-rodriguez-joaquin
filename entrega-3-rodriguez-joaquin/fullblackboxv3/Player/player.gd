@@ -10,7 +10,7 @@ func _physics_process(delta):
 	direccion = Input.get_axis("ui_left", "ui_right")
 	velocity.x = direccion * speed
 
-	if (jump_times < 3) and Input.is_action_just_pressed("ui_accept"):
+	if (jump_times < 2) and Input.is_action_just_pressed("jump"):
 		velocity.y -= jump
 		jump_times += 1
 	if is_on_floor():
