@@ -8,6 +8,7 @@ var player
 
 func _ready():
 	player = get_parent().find_child("Player")
+	add_to_group("turrets")
 	
 func _aim():
 	ray_cast.target_position = to_local(player.position)

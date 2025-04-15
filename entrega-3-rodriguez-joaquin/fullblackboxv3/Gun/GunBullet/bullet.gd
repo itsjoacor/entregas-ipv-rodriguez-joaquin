@@ -1,6 +1,14 @@
-extends Node2D
+extends Area2D
 
-const SPEED: int = 300
+@export var speed = 400
+var direction = Vector2(1, 0) 
 
-func _process(delta: float) -> void:
-	position += transform.x * SPEED * delta
+
+func _process(delta):
+	position += direction * speed * delta
+
+
+func _on_Bullet_body_entered(body):
+	if body.is_in_group("turrets"):  
+		body.queue_free()  
+		queue_free() 
