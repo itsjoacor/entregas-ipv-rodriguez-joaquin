@@ -1,19 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhv3a2m31ovxu"]
+[gd_scene load_steps=4 format=3 uid="uid://dhv3a2m31ovxu"]
 
 [ext_resource type="PackedScene" uid="uid://ccsfl252npavj" path="res://Player/Player.tscn" id="1_wbfu4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbfu4"]
-size = Vector2(1161, 20)
+[ext_resource type="PackedScene" uid="uid://c8pyjq7q5c3u1" path="res://Background/Map.tscn" id="2_xkndl"]
+[ext_resource type="PackedScene" uid="uid://6pdvqkaggn55" path="res://Turret/Turret.tscn" id="3_u44n3"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(-2, 0)
 
+[node name="Turret" parent="." instance=ExtResource("3_u44n3")]
+position = Vector2(133, 258)
+
 [node name="Player" parent="." instance=ExtResource("1_wbfu4")]
-position = Vector2(620, 303)
-collision_mask = 0
+position = Vector2(123, 441)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Map" parent="." instance=ExtResource("2_xkndl")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(581, 519)
-shape = SubResource("RectangleShape2D_wbfu4")
+[node name="Turret2" parent="." instance=ExtResource("3_u44n3")]
+position = Vector2(727, 244)
+
+[node name="Turret3" parent="." instance=ExtResource("3_u44n3")]
+position = Vector2(1323, 242)

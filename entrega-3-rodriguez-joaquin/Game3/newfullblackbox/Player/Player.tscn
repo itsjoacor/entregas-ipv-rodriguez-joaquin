@@ -5,16 +5,19 @@
 [ext_resource type="Script" uid="uid://b7lcbjnngt5uf" path="res://Player/player.gd" id="1_tok1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tok1r"]
-size = Vector2(126, 130)
+size = Vector2(42, 35.5)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_tok1r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.308594, 0.289062)
 texture = ExtResource("1_q3lat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_tok1r")
 
 [node name="Gun" parent="." instance=ExtResource("1_3qydi")]
+collision_mask = 2
