@@ -1,7 +1,6 @@
 extends Camera2D
 
 
-#Limito la vision de la camara desde un script , util? idk
 func _ready() -> void:
 	top_level = true 
 	global_position.y = 100

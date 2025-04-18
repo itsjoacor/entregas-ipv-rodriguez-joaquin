@@ -2,7 +2,6 @@ extends Area2D
 
 const BULLET = preload("res://GunBullet/GunBullet.tscn")
 
-# Called every frame
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 
