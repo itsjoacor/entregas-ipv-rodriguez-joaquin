@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @onready var ray_cast = $RayCast2D
 @onready var timer = $Timer
 @export var ammo : PackedScene
@@ -11,6 +10,8 @@ func _ready():
 	player = get_parent().find_child("Player")
 	ray_cast = $RayCast2D
 	add_to_group("turrets")
+	timer.wait_time = 0.8
+	timer.start()
 
 func _physics_process(delta):
 	_aim()
@@ -28,6 +29,7 @@ func _check_player_collision():
 
 func _on_timer_timeout() -> void:
 	_shoot()
+
 	
 func _shoot():
 	var bullet = ammo.instantiate()

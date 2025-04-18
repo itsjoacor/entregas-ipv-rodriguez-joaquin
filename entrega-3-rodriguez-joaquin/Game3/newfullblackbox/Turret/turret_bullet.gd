@@ -13,6 +13,7 @@ func _on_screen_exited():
 	queue_free()
 
 func _on_body_entered(body):
+	pass
 	if body.name == "Player":
 		get_tree().change_scene_to_file("res://Menu/GameOver.tscn")
 		queue_free()

@@ -21,7 +21,6 @@ texture = ExtResource("1_afj1m")
 collision_mask = 3
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.5, 0)
