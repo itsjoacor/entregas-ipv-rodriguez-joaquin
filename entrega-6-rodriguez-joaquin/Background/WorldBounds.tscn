@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bo8spw83uldvn"]
+
+[node name="WorldBounds" type="Node2D"]
