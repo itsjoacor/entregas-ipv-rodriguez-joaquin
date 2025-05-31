@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bowslpkfd6oih"]
 
-[ext_resource type="Script" uid="uid://m2gdraa6fegb" path="res://Menu/game_won.gd" id="1_tn7mk"]
+[ext_resource type="Script" path="res://Menu/game_over.gd" id="1_txhse"]
 [ext_resource type="Texture2D" uid="uid://dcwp6tv75xr4j" path="res://assets/space.png" id="2_f444w"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_nkib0"]
 
@@ -17,14 +17,14 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[node name="Game Won" type="Control"]
+[node name="Game Over" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tn7mk")
+script = ExtResource("1_txhse")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -47,7 +47,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 2
-theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
 text = "Restart"
@@ -57,7 +56,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 2
-theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
 text = "Exit

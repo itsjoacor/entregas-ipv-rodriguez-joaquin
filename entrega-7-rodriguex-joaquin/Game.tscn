@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhv3a2m31ovxu"]
+[gd_scene load_steps=7 format=3 uid="uid://dhv3a2m31ovxu"]
 
-[ext_resource type="Script" uid="uid://c00b10bj55r7w" path="res://game.gd" id="1_t88pq"]
+[ext_resource type="Script" path="res://game.gd" id="1_t88pq"]
 [ext_resource type="PackedScene" uid="uid://ccsfl252npavj" path="res://Player/Player.tscn" id="1_wbfu4"]
 [ext_resource type="PackedScene" uid="uid://c8pyjq7q5c3u1" path="res://Background/Map.tscn" id="2_xkndl"]
 [ext_resource type="PackedScene" uid="uid://6pdvqkaggn55" path="res://Turret/Turret.tscn" id="3_u44n3"]
 [ext_resource type="PackedScene" uid="uid://bjsxwkxo6j6ib" path="res://Menu/PauseMenu.tscn" id="5_r0x5m"]
+[ext_resource type="AudioStream" uid="uid://pv3peqsrtilu" path="res://assets/music/House In a Forest Loop.ogg" id="6_4i26y"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(-2, 0)
@@ -42,3 +43,7 @@ offset_bottom = 78.0
 grow_horizontal = 2
 text = "Godot Pause Menu!"
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_4i26y")
+autoplay = true

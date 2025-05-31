@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ck7q02tjhsmsj"]
 
-[ext_resource type="Script" uid="uid://m2gdraa6fegb" path="res://Menu/game_won.gd" id="1_pn66f"]
+[ext_resource type="Script" path="res://Menu/game_won.gd" id="1_pn66f"]
 [ext_resource type="Texture2D" uid="uid://dcwp6tv75xr4j" path="res://assets/space.png" id="2_0nuey"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_h3fkd"]
 
@@ -47,7 +47,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 2
-theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
 text = "Restart"
@@ -57,7 +56,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 2
-theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
 text = "Exit
