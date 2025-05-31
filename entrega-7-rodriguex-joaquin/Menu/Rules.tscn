@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc6bi4ue8815f"]
+
+[ext_resource type="Script" uid="uid://twgtfwqgac2y" path="res://Menu/rules.gd" id="1_862lu"]
+[ext_resource type="Texture2D" uid="uid://dcwp6tv75xr4j" path="res://assets/space.png" id="2_pwwlo"]
+[ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_mecyf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exbqw"]
+texture = ExtResource("2_pwwlo")
+modulate_color = Color(0.783523, 0.783523, 0.783523, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biqin"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Rules" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_862lu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_exbqw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 16.0
+offset_top = 198.0
+offset_right = 86.0
+offset_bottom = 223.0
+size_flags_vertical = 3
+theme_override_colors/icon_pressed_color = Color(0.970713, 0.000231605, 0.836293, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 2
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
+text = "Start game"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+offset_left = 338.0
+offset_top = 201.0
+offset_right = 409.0
+offset_bottom = 225.0
+size_flags_vertical = 3
+theme_override_colors/icon_pressed_color = Color(0.970713, 0.000231605, 0.836293, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 2
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -93.0
+offset_right = 103.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.713726, 0, 0.905882, 1)
+theme_override_fonts/font = ExtResource("3_mecyf")
+text = "TURRET ATACK RULES!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -66.0
+offset_right = 156.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.713726, 0, 0.905882, 1)
+theme_override_fonts/font = ExtResource("3_mecyf")
+theme_override_font_sizes/font_size = 14
+text = "Usa las flechas para moverte, apunta con el mouse y dispara con click derecho.  
+Destruye todas las torretas para ganar. Si una torreta te alcanza, pierdes.
+"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

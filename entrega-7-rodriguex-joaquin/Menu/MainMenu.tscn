@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://chhi37e8hcnc5"]
+
+[ext_resource type="Script" uid="uid://b67a01djabcq1" path="res://Menu/main_menu.gd" id="1_e1xpn"]
+[ext_resource type="Texture2D" uid="uid://dcwp6tv75xr4j" path="res://assets/space.png" id="2_tma8a"]
+[ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_tpenk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exbqw"]
+texture = ExtResource("2_tma8a")
+modulate_color = Color(0.783523, 0.783523, 0.783523, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biqin"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e1xpn")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_exbqw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 90.0
+offset_right = 260.0
+offset_bottom = 149.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/icon_pressed_color = Color(0.970713, 0.000231605, 0.836293, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 2
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
+text = "Start game"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/icon_pressed_color = Color(0.970713, 0.000231605, 0.836293, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 2
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
+text = "Rules
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/icon_pressed_color = Color(0.970713, 0.000231605, 0.836293, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 2
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_biqin")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -68.0
+offset_right = 109.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.713726, 0, 0.905882, 1)
+theme_override_fonts/font = ExtResource("3_tpenk")
+text = "GODOT TURRET ATACK!"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
